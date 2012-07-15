@@ -1,0 +1,11 @@
+%!: /header.html
+<h1>Renesas RX62N is running uIP stack</h1>
+<center>
+<p>
+<IMG SRC="product_logo.gif">
+</p>
+<p>
+<IMG SRC="RX62N.jpg">
+</p>
+</center>
+%!: /footer.html

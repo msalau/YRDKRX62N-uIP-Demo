@@ -1,0 +1,24 @@
+%!: /header.html
+<h1>On this page you can control the LEDs on RDK RX62N</h1>
+<center>
+<p>
+    <FORM ACTION="update.shtml" METHOD="GET">
+        <b><FONT COLOR="GREEN">LED 5</FONT></b>
+        <INPUT TYPE="RADIO" NAME="LEDA" VALUE="On"> On
+        <INPUT TYPE="RADIO" NAME="LEDA" VALUE="Off" CHECKED> Off<BR><BR>
+        <b><FONT COLOR="RED">LED 6</FONT></b>
+        <INPUT TYPE="RADIO" NAME="LEDB" VALUE="On"> On
+        <INPUT TYPE="RADIO" NAME="LEDB" VALUE="Off" CHECKED> Off<BR><BR>
+        <b><FONT COLOR="RED">LED 7</FONT></b>
+        <INPUT TYPE="RADIO" NAME="LEDC" VALUE="On"> On
+        <INPUT TYPE="RADIO" NAME="LEDC" VALUE="Off" CHECKED> Off<BR><BR>
+        <INPUT TYPE="SUBMIT" VALUE="Send"> <INPUT TYPE="RESET">
+    </FORM>
+</p>
+<!--
+<h1>LEDA - <FONT COLOR="YELLOW">YELLOW</FONT>,
+    LEDB - <FONT COLOR="ORANGE">ORANGE</FONT>,
+    LEDC - <FONT COLOR="RED">RED</FONT></h1>
+-->
+</center>
+%!: /footer.html
