@@ -171,7 +171,8 @@ int32_t R_Ether_Open(uint32_t ch, uint8_t mac_addr[])
 
   /* Initialize EDMAC and ETHERC  */
   EDMAC.EDMR.BIT.SWR = 1;
-  for( i = 0 ; i < 0x00000100 ; i++ );    /* Reset EDMAC */
+  for( i = 0 ; i < 0x00000100 ; i++ )     /* Reset EDMAC */
+      __asm volatile ("");
 
   /* ETHERC */
   /* TODO:  Check bit 5 */
@@ -265,7 +266,8 @@ int32_t R_Ether_Open(uint32_t ch, uint8_t mac_addr[])
 
   /* Enable EDMAC receive */
   EDMAC.EDRRR.LONG  = 0x00000001;                
-  for( i = 0 ; i < 0x0000100 ; i++ );
+  for( i = 0 ; i < 0x0000100 ; i++ )
+      __asm volatile ("");
 
   return R_ETHER_OK;
 }
