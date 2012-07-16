@@ -1,12 +1,14 @@
 PROJECT=uip_demo.elf
 PROJECT_MAP=$(PROJECT:.elf=.map)
 PROJECT_LST=$(PROJECT:.elf=.lst)
+PROJECT_HEX=$(PROJECT:.elf=.hex)
 
 CC=rx-elf-gcc
 AS=rx-elf-gcc
 LD=rx-elf-gcc
 SIZE=rx-elf-size
 OBJDUMP=rx-elf-objdump
+OBJCOPY=rx-elf-objcopy
 FLASH_TOOL=rxusb
 
 #	-Wredundant-decls \
@@ -108,10 +110,14 @@ $(PROJECT): $(OBJ)
 	@echo -e "\tOBJDUMP\t"$@
 	@$(OBJDUMP) -DS $^ > $@
 
+%.hex: %.elf
+	@echo -e "\tOBJCOPY\t"$@
+	@$(OBJCOPY) -Oihex $^ $@
+
 flash: $(PROJECT)
 	@$(FLASH_TOOL) -v $<
 
 clean:
-	@rm -f $(OBJ) $(DEP) $(PROJECT) $(PROJECT_MAP) $(PROJECT_LST)
+	@rm -f $(OBJ) $(DEP) $(PROJECT) $(PROJECT_MAP) $(PROJECT_LST) $(PROJECT_HEX)
 
 -include $(DEP)
