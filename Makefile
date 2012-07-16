@@ -110,6 +110,10 @@ $(PROJECT): $(OBJ)
 	@echo -e "\tOBJDUMP\t"$@
 	@$(OBJDUMP) -DS $^ > $@
 
+%.lst: %.o
+	@echo -e "\tOBJDUMP\t"$@
+	@$(OBJDUMP) -DS $^ > $@
+
 %.hex: %.elf
 	@echo -e "\tOBJCOPY\t"$@
 	@$(OBJCOPY) -Oihex $^ $@
