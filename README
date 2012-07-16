@@ -1,5 +1,5 @@
 This is uIP Demo running on YRDKRX62N board.
-Code originates from R01AN0586EU application note, but is ported to GCC compiler. Some platform specific elements are rewritten from scratch. RDPL usage is excluded, since it is not GCC friendly.
+Code originates from R01AN0586EU application note, but is ported to GCC compiler. Some platform specific elements are rewritten from scratch. RPDL usage is excluded, since it is not GCC friendly.
 
 Original application note:
   http://documentation.renesas.com/doc/products/mpumcu/apn/rx/r01an0586eu_rx.pdf
