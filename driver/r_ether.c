@@ -211,7 +211,7 @@ int32_t R_Ether_Open(uint32_t ch, uint8_t mac_addr[])
   EDMAC.TFTR.LONG   = 0x00000000;         /* threshold of Tx_FIFO */
   EDMAC.FDR.LONG    = 0x00000707;         /* transmit fifo & receive fifo is 2048 bytes */
   EDMAC.RMCR.LONG   = 0x00000001;         /* RR in EDRRR is under driver control */
-#if __LIT
+#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
   EDMAC.EDMR.BIT.DE = 1;
 #endif
 

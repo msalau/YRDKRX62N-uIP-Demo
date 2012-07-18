@@ -28,7 +28,7 @@ Typedef definitions
 struct Descriptor
 {
 	uint32_t	status;
-#if __LIT
+#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
 /* Little endian */
 	uint16_t	size;
 	uint16_t	bufsize;

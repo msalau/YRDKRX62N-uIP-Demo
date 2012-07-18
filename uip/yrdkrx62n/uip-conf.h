@@ -115,7 +115,7 @@ typedef unsigned short uip_stats_t;
  * \hideinitializer
  */
 // Renesas -- #define UIP_CONF_BYTE_ORDER      LITTLE_ENDIAN
-#ifdef __LIT
+#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
 #define UIP_CONF_BYTE_ORDER      UIP_LITTLE_ENDIAN
 #else
 #define UIP_CONF_BYTE_ORDER      UIP_BIG_ENDIAN

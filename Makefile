@@ -25,7 +25,6 @@ CFLAGS=\
 	-Iuip/apps/dhcpc \
 	-Iuip/apps/webserver \
 	-Iuser-app \
-	-D__LIT=1 \
 	-O2 \
 	-g2 \
 	-Wall \
